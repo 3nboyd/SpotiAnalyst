@@ -4,9 +4,9 @@ This branch contains a stats-focused Spotify homework report using the `moststre
 
 ## Open the visualizations
 
-Open this link to see the report as a webpage:
+Open this link to see the expanded report as a webpage:
 
-https://htmlpreview.github.io/?https://github.com/3nboyd/SpotiAnalyst/blob/spotify-stats-homework/stats-homework/index.html
+https://htmlpreview.github.io/?https://github.com/3nboyd/SpotiAnalyst/blob/spotify-stats-homework/stats-homework/report.html
 
 GitHub branch page:
 
@@ -16,7 +16,8 @@ The report includes the required frequency table, frequency polygon/bar graph, p
 
 ## Files
 
-- `stats-homework/index.html`: self-contained web report that builds the visualizations from the Spotify CSV
+- `stats-homework/report.html`: expanded web report with the updated interpretations
+- `stats-homework/index.html`: first web report version
 - `moststreamedsongs.csv`: Spotify dataset used for the analysis
 
 I also made a full notebook/HTML export locally for the class submission folder: `spotify_stats_homework.ipynb` and `spotify_stats_report.html`.
