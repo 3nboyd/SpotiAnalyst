@@ -4,13 +4,13 @@ This branch contains a stats-focused Spotify homework report using the `moststre
 
 ## Open the visualizations
 
-Open this file in the branch to see the hosted report code:
+Open this link to see the report as a webpage:
 
-https://github.com/3nboyd/SpotiAnalyst/blob/spotify-stats-homework/stats-homework/index.html
+https://htmlpreview.github.io/?https://github.com/3nboyd/SpotiAnalyst/blob/spotify-stats-homework/stats-homework/index.html
 
-If your browser/service allows direct HTML rendering from GitHub files, this is the report page path:
+GitHub branch page:
 
-https://raw.githubusercontent.com/3nboyd/SpotiAnalyst/spotify-stats-homework/stats-homework/index.html
+https://github.com/3nboyd/SpotiAnalyst/tree/spotify-stats-homework
 
 The report includes the required frequency table, frequency polygon/bar graph, pie chart, histogram, cumulative frequency plot, stem-and-leaf plot, box plot, and scatter plot.
 
