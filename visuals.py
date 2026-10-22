@@ -77,7 +77,7 @@ def load_user(path: str = "spotify_history.csv") -> pd.DataFrame:
 def plot_global_top_songs(df: pd.DataFrame, n: int = 20) -> None:
     top = df.nlargest(n, "streams")[::-1]
     plt.figure(figsize=(9, 10))
-    labels = (top["track_name"] + " — " + top["artist_name"]).apply(lambda s: truncate_label(s, 45))
+    labels = (top["track_name"] + " - " + top["artist_name"]).apply(lambda s: truncate_label(s, 45))
     streams_billions = top["streams"] / 1_000_000_000
     plt.barh(labels, streams_billions, color="#1DB954")
     plt.xlabel("Total Streams (Billions)")
@@ -120,7 +120,7 @@ def plot_user_top_artists(df: pd.DataFrame, n: int = 15) -> None:
 
 
 def plot_user_top_tracks(df: pd.DataFrame, n: int = 15) -> None:
-    track_labels = df["track_name"] + " — " + df["artist_name"]
+    track_labels = df["track_name"] + " - " + df["artist_name"]
     top = df.assign(label=track_labels).groupby("label")["hours_played"].sum().sort_values(ascending=False).head(n)[::-1]
     labels = [truncate_label(lbl, 45) for lbl in top.index]
     plt.figure(figsize=(9, 10))
@@ -170,7 +170,7 @@ def plot_overlap_bar(merged: pd.DataFrame, user_df: pd.DataFrame) -> None:
 
 def plot_overlap_top_tracks(merged: pd.DataFrame, top_n: int = 10) -> None:
     """Top overlapping tracks by hours listened."""
-    labels = merged["track_name_user"] + " — " + merged["artist_name_user"]
+    labels = merged["track_name_user"] + " - " + merged["artist_name_user"]
     totals = (
         merged.assign(label=labels)
         .groupby("label")["hours_played_user"]
