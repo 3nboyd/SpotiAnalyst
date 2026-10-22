@@ -27,3 +27,14 @@ Run these commands from the repository root, then refresh the page. Chart images
 ## Data sources
 
 The bundled examples use [Spotify Most Streamed Songs from Kaggle](https://www.kaggle.com/datasets/abdulszz/spotify-most-streamed-songs) and [Spotify Streaming History from Maven Analytics](https://mavenanalytics.io/data-playground/spotify-streaming-history). The website includes the data-source credits and chart interpretations.
+
+## Input columns
+
+| File | Columns used by the chart script |
+| --- | --- |
+| `moststreamedsongs.csv` | `track_name`, `artist_name` (or `artist(s)_name`), `streams`, and `release_year` (or `released_year`) |
+| `spotify_history.csv` | `track_name` (or `trackName`), `artist_name` (or `artistName`), `ms_played` (or `msPlayed`), and `end_time` (or `endTime`, `timestamp`, or `ts`) |
+
+Listening time is supplied in milliseconds. The script parses timestamps to group listening by hour. Streams and listening times are converted to numbers before plotting.
+
+To use other data, prepare CSV files with these columns and the same filenames, then rerun `visuals.py`. Export formats may need conversion to this schema first. Personal listening history stays in your local copy unless you publish it; keep it out of commits and use the bundled sample for public demonstrations.
