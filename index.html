@@ -39,8 +39,8 @@
             <h2>How To Use</h2>
             <div class="viz-card">
                 <ol>
-                    <li>Place <code>moststreamedsongs.csv</code> and <code>spotify_history.csv</code> in this folder (use the bundled ones or your own exports).</li>
-                    <li>Run <code>python visuals.py</code> to clean the data and generate fresh PNG charts in <code>img/</code>.</li>
+                    <li>Clone or download the repository. To use your own data, prepare compatible CSVs named <code>moststreamedsongs.csv</code> and <code>spotify_history.csv</code> in your local project folder; see the README for column names.</li>
+                    <li>Install the Python dependencies from <code>requirements.txt</code>, then run <code>python visuals.py</code> from that folder to regenerate the PNG charts in <code>img/</code>.</li>
                     <li>Open or refresh this page to see the PNGs. Swap in new CSVs and rerun the script any time.</li>
                 </ol>
                 <p>If a chart looks empty, check that your files have track name, artist name, streams (global), and msPlayed/endTime (history).</p>
@@ -55,7 +55,7 @@
                 <p><strong>Datasets used:</strong> global most-streamed songs (audio features and stream counts) and a Spotify streaming history export (your played tracks with timestamps and time played).</p>
                 <p><strong>Data sources:</strong> <a href="https://www.kaggle.com/datasets/abdulszz/spotify-most-streamed-songs" target="_blank" rel="noreferrer">Kaggle: Spotify Most Streamed Songs</a> and <a href="https://mavenanalytics.io/data-playground/spotify-streaming-history" target="_blank" rel="noreferrer">Maven Analytics: Spotify Streaming History</a>.</p>
                 <p><strong>Sample CSVs:</strong> Global hits from Kaggle (<a href="https://www.kaggle.com/datasets/abdulszz/spotify-most-streamed-songs">link</a>) and a streaming history sample from Maven Analytics (<a href="https://mavenanalytics.io/data-playground/spotify-streaming-history">link</a>).</p>
-                <p><strong>Using your own Spotify data:</strong> request your “Extended” streaming history (all-time) at <a href="https://www.spotify.com/us/account/privacy/download/">Spotify privacy download</a>. After you get the email, download the ZIP, find the history CSV, rename it to <code>spotify_history.csv</code>, place it in this folder (and your global file as <code>moststreamedsongs.csv</code> if you have a different one), run <code>python visuals.py</code>, then refresh this page.</p>
+                <p><strong>Using your own data:</strong> prepare a streaming-history CSV with the columns described in the README, replace the local sample, and rerun <code>python visuals.py</code>. This page displays generated images; it does not upload or process files in the browser.</p>
             </div>
         </section>
 
